@@ -13,8 +13,8 @@ export function App() {
         <Header title="ABC Blocks" />
         <main className="container mx-auto max-w-4xl px-4">
           <div className="mt-6 flex gap-4 justify-center">
-            {blocks.map((block, index) => (
-              <OneBlock block={block} key={`${index}_${block}`} />
+            {blocks.map((block) => (
+              <OneBlock block={block} key={block} />
             ))}
           </div>
           <div className="mt-6 flex gap-2 justify-center">
