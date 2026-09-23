@@ -5,7 +5,7 @@ import { OneBlock } from "@/components/one-block.tsx"
 import { useBlocks } from "@/hooks/use-blocks.tsx"
 
 export function App() {
-  const { blocks, handleShuffle, handleSort, handleReverse } = useBlocks()
+  const { blocks, shuffle, sort, reverse } = useBlocks()
 
   return (
     <div className="flex min-h-screen flex-col justify-between">
@@ -18,9 +18,9 @@ export function App() {
             ))}
           </div>
           <div className="mt-6 flex gap-2 justify-center">
-            <Button onClick={handleShuffle}>Shuffle</Button>
-            <Button onClick={handleSort}>Sort (A-Z)</Button>
-            <Button onClick={handleReverse}>Reverse</Button>
+            <Button onClick={shuffle}>Shuffle</Button>
+            <Button onClick={sort}>Sort (A-Z)</Button>
+            <Button onClick={reverse}>Reverse</Button>
           </div>
         </main>
       </div>

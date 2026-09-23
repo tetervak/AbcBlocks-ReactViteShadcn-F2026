@@ -5,26 +5,21 @@ export function useBlocks() {
   const [blocks, setBlocks] = useState(init)
 
   // Shuffle Logic (Fisher-Yates Algorithm)
-  const handleShuffle = () => {
+  const shuffle = () => {
     const shuffled = [...blocks].sort(() => Math.random() - 0.5)
     setBlocks(shuffled)
   }
 
   // Sort Logic (by Name)
-  const handleSort = () => {
+  const sort = () => {
     const sorted = [...blocks].sort()
     setBlocks(sorted)
   }
 
   // Reverse Logic
-  const handleReverse = () => {
+  const reverse = () => {
     setBlocks([...blocks].reverse())
   }
 
-  return {
-    blocks,
-    handleShuffle,
-    handleSort,
-    handleReverse,
-  }
+  return { blocks, shuffle, sort, reverse}
 }
